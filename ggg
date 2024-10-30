@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+
+<h2>Kādas ir iespējas ar JavaScript?</h2>
+
+<p>JavaScript var mainit atribūtu vērtības HTML.</p>
+
+<p>šajā gadījumā JavaScript maina attēla atribūta src (avota) vērtību zīmējumā.</p>
+
+<!-- Poga "Man nepatik" -->
+
+<button onclick="dislike()">Man nepatik!</button>
+
+<!-- Attēls starp abām pogâm -->
+
+<img id="myimage" src="dislike.png" style="width:100px; vertical-align: middle;">
+
+<!-- Poga "Man patik" -->
+
+<button onclick="like()">Man patik</button>
+
+<!-- Rādītāja vērtības -->
+
+<p>Patik: <span id="likeCount">0</span></p>
+<p>Nepatik: <span id="dislikeCount">0</span></p>
+
+<script>
+function like() {
+  document.getElementById("myimage").src = "like.png";
+  document.getElementById("likeCount").textContent++;
+}
+
+function dislike() {
+  document.getElementById("myimage").src = "dislike.png";
+  document.getElementById("dislikeCount").textContent++;
+}
+</script>
+
+</body>
+
+</html>
